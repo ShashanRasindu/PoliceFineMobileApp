@@ -1,0 +1,7 @@
+{
+  "name": "PoliceFineApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
