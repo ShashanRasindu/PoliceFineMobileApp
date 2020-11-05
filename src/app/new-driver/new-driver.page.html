@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >
+      Traffic Police Fine System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+  <p style="text-align: center; color: darkturquoise;font-size: 15px">
+    <i> {{Tname}} </i>
+  </p>
+  <p style="text-align: center; color: blue;" ><b>E-පත පිළිබඳ තොරතුරු</b></p>
+
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+
+      <ion-grid>
+
+        <ion-item id="nic">
+          <ion-label position="floating" style="color: blue">ජා.හ.අ (123456789V)</ion-label>
+          <ion-input type="text"  style="font-size: 15px;" [(ngModel)]="Dnic" pattern="\d{9}V">  </ion-input>
+        </ion-item>
+        <br>
+        <ion-item id="lno">
+          <ion-label position="floating" style="color: blue">රියදුරු අංකය (B1234567)</ion-label>
+          <ion-input type="text"  style="font-size: 15px;" [(ngModel)]="Dlno" pattern="^B\d{7}$"> </ion-input>
+        </ion-item>
+        <br>
+        <ion-item id="name">
+          <ion-label position="floating" style="color: blue">නම</ion-label>
+          <ion-input type="text"  style="font-size: 15px;" [(ngModel)]="Dname" > </ion-input>
+          <!--onkeypress="return /[a-z]/i.test(event.key)"-->
+        </ion-item>
+        <br>
+        <!--disabled-->
+        <ion-item id="address">
+          <ion-label position="floating" style="color: blue">ලිපිනය</ion-label>
+          <ion-input type="text"  style="font-size: 15px;" [(ngModel)]="Daddress" ></ion-input>
+        </ion-item>
+        <br>
+        <ion-item id="phone">
+          <ion-label position="floating" style="color: blue">දුරකථන අංකය </ion-label>
+          <ion-input type="number"  style="font-size: 15px;" [(ngModel)]="Dphone" pattern="\d{9}"> </ion-input>
+        </ion-item>
+      </ion-grid>
+      <br>
+      <br>
+      <ion-button color="secondary" expand="block" shape="round"  (click)="savenew()">තහවුරු කරන්න</ion-button>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+</ion-content>
+

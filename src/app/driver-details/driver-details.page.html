@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >
+      Traffic Police Fine System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+  <p style="text-align: center; color: darkturquoise;font-size: 15px">
+    <i> {{Tname}} </i>
+  </p>
+  <p style="text-align: center; color: blue;" ><b>රියදුරු පිළිබඳ තොරතුරු</b></p>
+
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <ion-grid>
+        <ion-label style="color: blue">නම</ion-label>
+        <ion-item>
+          <ion-input type="text" readonly style="font-size: 15px;"> {{Dname}}</ion-input>
+        </ion-item>
+        <ion-label style="color: blue">රියදුරු අංකය</ion-label>
+        <ion-item>
+          <ion-input type="text" readonly style="font-size: 15px;"> {{Dlno}}</ion-input>
+        </ion-item>
+        <ion-label style="color: blue">ජා.හ.අ</ion-label>
+        <ion-item>
+          <ion-input type="text" readonly style="font-size: 15px;"> {{Dnic}}</ion-input>
+        </ion-item>
+        <ion-label style="color: blue">ලිපිනය</ion-label>
+        <!--disabled-->
+        <ion-item>
+          <ion-input type="text" readonly style="font-size: 15px;"> {{Daddress}}</ion-input>
+        </ion-item>
+        <br>
+        <i style="font-size: 15px; color: darkturquoise">* රියදුරුගේ දැනට පවතින දුරකථන අංකය දැයි පරික්ෂා කරන්න.
+        </i>
+        <br>
+        <ion-label style="color: blue">දුරකථන අංකය</ion-label>
+        <ion-item id="phone">
+          <ion-input type="number" [(ngModel)]="Dphone" style="font-size: 15px;" pattern="\d{9}"></ion-input>
+        </ion-item>
+      </ion-grid>
+      <br>
+      <ion-button color="secondary" expand="block" shape="round" (click)="next()" >ඊලඟ >></ion-button>
+
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+</ion-content>

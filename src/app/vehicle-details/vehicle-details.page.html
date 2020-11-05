@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >
+      Traffic Police Fine System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  >
+  <p style="text-align: center; color: darkturquoise;font-size: 15px">
+    <i> {{Tname}}</i>
+  </p>
+  <p style="text-align: center; color: blue;" ><b>වාහනය පිළිබඳ තොරතුරු</b></p>
+
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="10">
+      <ion-grid>
+        <br>
+        <ion-item id="type">
+          <ion-label style="color: blue">වාහන වර්ගය</ion-label>
+          <ion-select interface="popover" [(ngModel)]="Vtype">
+            <ion-select-option value="Bike">Bike</ion-select-option>
+            <ion-select-option value="Three Weel">Three Weel</ion-select-option>
+            <ion-select-option value="Car">Car</ion-select-option>
+            <ion-select-option value="Van">Van</ion-select-option>
+            <ion-select-option value="Bus">Bus</ion-select-option>
+            <ion-select-option value="Lorry">Lorry </ion-select-option>
+            <ion-select-option value="Long Vehicle">Long Vehicle</ion-select-option>
+            <ion-select-option value="Jeep">Jeep</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <br>
+        <ion-item id="province">
+          <ion-label style="color: blue">පළාත</ion-label>
+          <ion-select interface="popover" [(ngModel)]="Vprovince">
+            <ion-select-option value="WP">WP</ion-select-option>
+            <ion-select-option value="NP">NP</ion-select-option>
+            <ion-select-option value="EP">EP</ion-select-option>
+            <ion-select-option value="SP">SP</ion-select-option>
+            <ion-select-option value="CP">CP</ion-select-option>
+            <ion-select-option value="SG">SG</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <br>
+
+        <ion-item id="letter">
+          <ion-label position="floating" style="color: blue">වාහන අක්ෂරය</ion-label>
+          <ion-input type="text"  style="font-size: 15px;"  [(ngModel)]="Vletter" onkeypress="return /[a-z]/i.test(event.key)" >  </ion-input>
+        </ion-item>
+        <br>
+        <ion-item id="no">
+          <ion-label position="floating" style="color: blue">වාහන අංකය</ion-label>
+          <ion-input type="number"  style="font-size: 15px;" [(ngModel)]="Vno" pattern="\d{4}"> </ion-input>
+        </ion-item>
+      </ion-grid>
+      <br><br>
+      <ion-button color="secondary" expand="block" shape="round" (click)="next()">ඊලඟ >></ion-button>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+
+</ion-content>

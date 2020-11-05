@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >
+      Traffic Police Fine System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  class="ion-padding">
+  <p style="text-align: center; color: darkturquoise;font-size: 15px">
+    <i> {{Tname}}</i>
+  </p>
+  <p style="text-align: center; color: blue;" ><b>E-පත පිළිබඳ තොරතුරු</b></p>
+
+  <ion-row>
+  <ion-col size="1"></ion-col>
+  <ion-col size="10">
+
+    <ion-grid>
+      <ion-label style="color: blue">රියදුරු අංකය</ion-label>
+      <ion-item>
+        <ion-input type="text" disabled style="font-size: 15px;">{{Dlno}} </ion-input>
+      </ion-item>
+      <ion-label style="color: blue">වාහන අංකය</ion-label>
+      <ion-item>
+        <ion-input type="text" disabled style="font-size: 15px;"> {{Vno}}</ion-input>
+      </ion-item>
+      <ion-label style="color: blue">වාහන වර්ගය</ion-label>
+      <ion-item>
+        <ion-input type="text" disabled style="font-size: 15px;"> {{Vtype}}</ion-input>
+      </ion-item>
+      <ion-label style="color: blue">වැරදීම්</ion-label>
+      <!--disabled-->
+      <ion-item>
+        <ion-input type="text" disabled style="font-size: 15px;"> {{Mname}}</ion-input>
+      </ion-item>
+    </ion-grid>
+    <br>
+    <ion-label style="color: red; font-size: 15px;"><b><i>* මෙහි පෙන්වන සහ ඔබ ඇතුළත් කල තොරතුරු නිවැරදිනම් පමනක් තහවුරු කරන්න</i></b></ion-label>
+    <br><br>
+    <ion-button color="secondary" expand="block" shape="round" *ngIf="Red" (click)="FineBill()" >තහවුරු කරන්න</ion-button>
+  </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+</ion-content>

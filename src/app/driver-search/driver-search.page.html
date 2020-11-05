@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >
+      Traffic Police Fine System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Traffic Police Fine System</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div>
+    <p style="text-align: center; color: blue;font-size: 18px">
+      <i> {{Tname}}</i>
+  </p>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+        <p style="font-size: 15px;">
+          <i>රියදුරු මහතා අපගේ පද්ධතියේ ලියාපදිංචි පුද්ගලයෙක් නම් මෙහි රියදුරු අංකය ඇතුළත් කර පහත Button එක Click කරන්න.
+          </i></p>
+        <!--<img src="assets/police/arrow.gif" width="30%" height="35%" style="height: 20px;">-->
+        <ion-row >
+          <ion-col size="4"></ion-col>
+          <ion-col size="5">
+            <img src="assets/police/arrow.gif" width="50%" height="35%" style="height: 20px;">
+          </ion-col>
+          <ion-col size="3"></ion-col>
+        </ion-row>
+
+        <ion-item id="bar" >
+          <ion-label position="floating" style="color: cornflowerblue">රියදුරු අංකය (B1234567)</ion-label>
+          <ion-input  type="text" style="border: #0d0d0d !important;" [(ngModel)]="Dlno" pattern="^B\d{7}$" required="true"></ion-input>
+        </ion-item>
+        <ion-label style="color: red" *ngIf="Wrong"><br> <b>* මෙම රියදුරු ලියාපදිංචි වී නොමැත. </b></ion-label>
+        <ion-label style="color: red" *ngIf="act"><br> <b>* මෙම රියදුරු ලියාපදිංචි වී නොමැත. </b></ion-label>
+        <br><br>
+        <ion-button color="secondary" expand="block" shape="round" *ngIf="submit"  (click)="search()" ><b>සොයන්න</b></ion-button>
+        <br>
+        <p style="font-size: 15px;">
+          <i>රියදුරු මහතා අපගේ පද්ධතියේ ලියාපදිංචි  වී නොමැති නම් පහත Button එක Click කරන්න.
+          </i></p>
+        <ion-row >
+          <ion-col size="4"></ion-col>
+          <ion-col size="5">
+            <img src="assets/police/arrow.gif" width="50%" height="35%" style="height: 20px;">
+          </ion-col>
+          <ion-col size="3"></ion-col>
+        </ion-row>
+
+        <ion-button color="tertiary" expand="block" shape="round" (click)="newDriver()">නව රියදුරු ලියාපදිංචිය</ion-button>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>

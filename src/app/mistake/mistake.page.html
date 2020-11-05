@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title >
+      Traffic Police Fine System
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  class="ion-padding">
+  <p style="text-align: center; color: darkturquoise;font-size: 15px">
+    <i> {{Tname}}</i>
+  </p>
+  <p style="text-align: center; color: blue;" ><b>වැරදීම් පිළිබඳ තොරතුරු</b></p>
+
+  <!--<ion-row>-->
+    <!--<ion-col size="1"></ion-col>-->
+    <!--<ion-col size="1">-->
+      <ion-radio-group [(ngModel)]="Mistake" >
+
+        <ion-item>
+          <ion-label>හඳුනා ගැනීමේ තහඩුව නොමැති වීම <br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+
+          <ion-radio slot="start" color="tertiary" value="01-හඳුනා ගැනීමේ තහඩුව නොමැති වීම"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>ආදායම් බලපත්‍රය රැගෙන නොයාම <br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+          <ion-radio slot="start" color="tertiary" value="02-ආදායම් බලපත්‍රය රැගෙන නොයාම"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>ආදායම් බලපත්‍ර නීති උල්ලංඝනය <br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+          <ion-radio slot="start" color="tertiary" value="03-ආදායම් බලපත්‍ර නීති උල්ලංඝනය "></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>බලපත්‍ර නොමැතිව හදිසි සේවා සහ පොදු සේවා වාහනයක් පැදවීම <br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+
+          <ion-radio slot="start" color="tertiary" value="04-බලපත්‍ර නොමැතිව හදිසි සේවා සහ පොදු සේවා වාහනයක් පැදවීම"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>බලපත්‍ර නොමැතිව විශේෂ කාර්ය වාහන පැදවීම <br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+          <ion-radio slot="start" color="tertiary" value="05-බලපත්‍ර නොමැතිව විශේෂ කාර්ය වාහන පැදවීම"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>බලපත්‍ර නොමැතිව රසායනික ද්‍රව්‍ය, උපද්‍රවකාරී අපද්‍රව්‍ය පැටවූ වාහනයක් පැදවීම<br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+          <ion-radio slot="start" color="tertiary" value="06-බලපත්‍ර නොමැතිව රසායනික ද්‍රව්‍ය, උපද්‍රවකාරී අපද්‍රව්‍ය පැටවූ වාහනයක් පැදවීම"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>පන්තියට අයත් වාහනයක් පැදවීම සඳහා බලපත්‍රයක් නොමැතිවීම <br> <span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+
+          <ion-radio slot="start" color="tertiary" value="07-පන්තියට අයත් වාහනයක් පැදවීම සඳහා බලපත්‍රයක් නොමැතිවීම"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>රියදුරු බලපත්‍රය රැගෙන නොයාම <br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+          <ion-radio slot="start" color="tertiary" value="08-රියදුරු බලපත්‍රය රැගෙන නොයාම "></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>උපදේශක බලපත්‍රයක් නොමැතිවීම <br> <span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+          <ion-radio slot="start" color="tertiary" value="09-උපදේශක බලපත්‍රයක් නොමැතිවීම"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>වේගසීමා විධිවිධාන උල්ලංඝනය <br><span style="color: darkturquoise; font-size: 15px;"> RS 1000</span></ion-label>
+          <ion-radio slot="start" color="tertiary" value="10-වේගසීමා විධිවිධාන උල්ලංඝනය"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    <!--</ion-col>-->
+    <!--<ion-col size="1"></ion-col>-->
+  <!--</ion-row>-->
+  <ion-row>
+    <ion-col size="2"></ion-col>
+    <ion-col size="8">
+      <br><br>
+      <ion-button color="secondary" expand="block" shape="round" *ngIf="Red" (click)="next()">ඊලඟ >></ion-button>
+    </ion-col>
+    <ion-col size="2"></ion-col>
+  </ion-row>
+
+</ion-content>

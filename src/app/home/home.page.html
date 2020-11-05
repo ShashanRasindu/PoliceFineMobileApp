@@ -1,20 +1,56 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="primary">
+    <ion-title >
+      Traffic Police Fine System
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding" >
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Traffic Police Fine System</ion-title>
     </ion-toolbar>
   </ion-header>
+<div>
+    <br>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+        <img  src="assets/police/man.gif" alt="Description" />
+
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+    <h2 style="text-align: center ; color: blue"><b>Login Traffic Officer</b></h2>
+
+
+    <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+            <p style="text-align: center; font-size: 15px;"> කරුණාකර ඔබගේ ජා.හ.අ සහ මුරපදය මෙහි ඇතුළත් කරන්න</p>
+            <ion-label style="color: red" *ngIf="Wrong"> <b>* ඔබගේ ජා.හ.අ සහ මුරපදය වැරදියි. </b></ion-label>
+            <ion-item id="nic">
+                <ion-label position="floating" style="color: blue">ජා.හ.අ (123456789V)</ion-label>
+                <ion-input type="text" [(ngModel)]="officerID" pattern="\d{9}V" required="true" e ></ion-input>
+            </ion-item>
+            <ion-item id="passW">
+                <ion-label position="floating" style="color: blue">මුරපදය</ion-label>
+                <ion-input  type="password" [(ngModel)]="Pass"  ></ion-input>
+            </ion-item>
+
+            <br><br>
+            <ion-button color="primary" expand="block" shape="round" *ngIf="submit" (click)="FineUser()">පිවිසුම</ion-button>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+    </ion-row>
+
+
+
+</div>
+  <!--<div id="container">-->
+    <!--<strong>Ready to create an app?</strong>-->
+    <!--<p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>-->
+  <!--</div>-->
 </ion-content>
